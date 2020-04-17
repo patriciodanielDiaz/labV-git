@@ -37,6 +37,15 @@ public class PersonController {
         return personService.getPersonById(PersonId);
     }
 
+    @GetMapping("/{PersonEdad}")
+    public
+    Person getPersonByEdad(@PathVariable Integer Edad){
+
+
+
+        return null;
+    }
+
     @PostMapping("/")
     public void addPerson(@RequestBody @Valid final Person person){
 
