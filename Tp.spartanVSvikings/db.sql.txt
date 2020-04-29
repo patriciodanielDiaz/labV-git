@@ -1,0 +1,20 @@
+drop DATABASE  spartanvikings;
+create database spartanvikings;
+use spartanvikings;
+create table human (id_human int auto_increment,
+                    name varchar(30),
+                    age int,
+                    weight float,
+                    PRIMARY KEY (id_human));
+
+create table spartan (id_spartan int auto_increment,
+                      id_human int,
+                      professional_drinker int,
+                      PRIMARY KEY (id_spartan),
+                      CONSTRAINT fk_spartan_human FOREIGN KEY (id_human) references human(id_human));
+
+create table viking (id_viking int auto_increment,
+                      id_human int,
+                      extra_tolerance int,
+                      PRIMARY KEY (id_viking),
+                      CONSTRAINT fk_viking_human FOREIGN KEY (id_human) references human(id_human));

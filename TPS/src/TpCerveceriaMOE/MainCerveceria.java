@@ -7,8 +7,6 @@ class MainCerveceria {
         BeerHouse beerHouse=new BeerHouse();
 
 
-
-
         BeerConsumer beerConsumer=new BeerConsumer(beerHouse);
         BeerProducter beerProducter=new BeerProducter(beerHouse);
 
